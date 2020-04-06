@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
       const currentData = body.currently;
       const dayData = body.daily;
 
-      callback(undefined, `${dayData.data[0].summary} It is currently ${currentData.temperature} degrees out. There is a ${currentData.precipProbability}% chance of rain.`);
+      callback(undefined, `${dayData.data[0].summary} It is currently ${currentData.temperature} degrees out. There is a ${currentData.precipProbability}% chance of rain. The minimum temperature during the day will be ${dayData.data[0].temperatureMin} degrees and maximum temperature will be ${dayData.data[0].temperatureMax} degrees`);
     }
   })
 }
